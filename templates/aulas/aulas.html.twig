@@ -17,4 +17,24 @@
         <li>Your template at <code>/var/www/html/AnidiCursos/templates/aulas/index.html.twig</code></li>
     </ul>
 </div>
+
+<section>
+		<table class="table table-primary table-striped m-3 p-3">
+			<tr>
+				<th>Codigo</th>
+				<th>Capacidad</th>
+				<th>Adaptado</th>
+			</tr>
+
+			{% for aula in aulas %}
+			<tr>
+				<td>{{aula.codigo}}</td>
+				<td>{{aula.capacidad}}</td>
+				<td>{{aula.adaptado? "Si" : "No" }}</td>
+			</tr>
+            {% endfor %}
+
+
+		</table>
+	</section>
 {% endblock %}

@@ -17,4 +17,22 @@
         <li>Your template at <code>/var/www/html/AnidiCursos/templates/cursos/index.html.twig</code></li>
     </ul>
 </div>
+
+<section>
+		<table class="table table-primary table-striped m-3 p-3">
+			<tr>
+				<th>Expediente</th>
+				<th>Denominación</th>
+				<th>Cod Aula</th>
+			</tr>
+
+			{% for curso in cursos %}
+			<tr>
+				<td>{{curso.expediente}}</td>
+				<td>{{curso.denominacion}}</td>
+				<td>{{curso.codAula.codigo}}</td>
+			</tr>
+            {% endfor %}
+		</table>
+	</section>
 {% endblock %}
